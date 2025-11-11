@@ -63,21 +63,16 @@ img {
   }
 }
 
-/* --- Parallax Section on Mobile --- */
+/* --- Remove Parallax on Mobile --- */
 @media (max-width: 768px) {
   .parallax-window {
-    background-attachment: scroll !important;
-    background-size: cover;
-    background-position: center;
-    filter: brightness(1.1); /* Slightly lighten image */
+    background-attachment: scroll !important; /* Disable parallax */
+    background-position: center !important;
+    background-size: cover !important;
   }
 
   .parallax-window::before {
-    background: none !important; /* Remove dark overlay */
-  }
-
-  .tm-bg-white-transparent {
-    background: rgba(255, 255, 255, 0.95) !important; /* Brighten content */
+    content: none !important; /* Remove any overlay */
   }
 }
 
