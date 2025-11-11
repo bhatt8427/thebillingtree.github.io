@@ -17,14 +17,28 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <style>
-      /* Disable clicking on all images */
-      img {
-        pointer-events: none;
-      }
-      a {
-        pointer-events: none;
-      }
-    </style>
+  /* Disable clicking on all images */
+  img {
+    pointer-events: none;
+  }
+  a {
+    pointer-events: none;
+  }
+
+  /* Brighten parallax and overlay on mobile */
+  @media (max-width: 768px) {
+    .parallax-window::before {
+      background: none !important; /* Remove dark overlay */
+    }
+    .tm-bg-white-transparent {
+      background: rgba(255, 255, 255, 0.95) !important; /* Make overlay lighter */
+    }
+    .parallax-window {
+      filter: brightness(1.1); /* Slightly brighten image */
+    }
+  }
+</style>
+
   </head>
 
   <body>
@@ -346,3 +360,4 @@
 
     </body>
 </html>
+
