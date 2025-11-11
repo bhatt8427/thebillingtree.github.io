@@ -19,6 +19,7 @@
   <body>
     <main class="container-fluid">
       <div class="row">        
+        <!-- Sidebar Navigation -->
         <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
           <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -32,6 +33,7 @@
               </div>
             </div>
 
+            <!-- Clickable Menu -->
             <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
               <li class="nav-item"><a href="#intro" class="nav-link active"><span class="d-inline-block mr-3">Intro</span><span class="d-inline-block tm-white-rect"></span></a></li>
               <li class="nav-item"><a href="#about" class="nav-link"><span class="d-inline-block mr-3">About</span><span class="d-inline-block tm-white-rect"></span></a></li>
@@ -53,7 +55,9 @@
           </div>
         </nav>
         
+        <!-- Main Content -->
         <main role="main" class="ml-sm-auto col-12">
+          <!-- INTRO -->
           <div class="parallax-window" data-parallax="scroll" data-image-src="img/front page.jpeg">
             <div class="tm-section-wrap">
               <section id="intro" class="tm-section">
@@ -72,6 +76,7 @@
             </div>            
           </div>
 
+          <!-- ABOUT -->
           <div class="tm-section-wrap bg-white">
             <section id="about" class="row tm-section">
               <div class="col-xl-6">
@@ -104,7 +109,7 @@
             </section>
           </div>
             
-          <!-- SERVICES SECTION (Gallery made unclickable) -->
+          <!-- SERVICES (Gallery unclickable) -->
           <div class="tm-section-wrap bg-white">
             <section id="work" class="row tm-section">
               <div class="col-12">
@@ -177,6 +182,7 @@
             </section>
           </div>
             
+          <!-- CLIENTS -->
           <div class="tm-section-wrap bg-white">
             <section id="clients" class="row tm-section">
               <div class="col-12 tm-section-pad">
@@ -204,6 +210,7 @@
             </section>
           </div>
             
+          <!-- CONTACT -->
           <div class="tm-section-wrap bg-white">
             <section id="talk" class="row tm-section">
               <div class="col-xl-6 mb-5">
@@ -225,7 +232,7 @@
 
               <div class="col-xl-6 mb-5">
                 <div class="tm-contact-form-wrap">
-                  <form action="send_mail.php" method="POST" class="tm-contact-form">
+                  <form action="https://formspree.io/f/xzzybkla" method="POST" class="tm-contact-form">
                     <div class="form-group">
                       <input type="text" id="contact_name" name="contact_name" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Name" required />
                     </div>
@@ -247,11 +254,30 @@
       </div>
     </main>
 
+    <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/templatemo-scripts.js"></script>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+      $(document).ready(function () {
+        $('#tmMainNav').singlePageNav({
+          offset: $('.tm-sidebar-sticky').outerHeight(),
+          filter: ':not(.external)',
+          updateHash: true,
+          speed: 600
+        });
+
+        // Close menu on mobile after clicking a link
+        $('.nav-link').on('click', function () {
+          $('.navbar-toggler').trigger('click');
+        });
+      });
+    </script>
+
   </body>
 </html>
