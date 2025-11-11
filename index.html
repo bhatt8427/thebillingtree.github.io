@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/templatemo-dream-pulse.css" />
     <link rel="stylesheet" href="css/responsive.css">
-  </head>
-  <body>
+      </head>
+      <body>
     <main class="container-fluid">
       <div class="row">        
           <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
@@ -302,6 +302,7 @@
                         <h2 class="tm-color-primary tm-section-title mb-4">Talk to Us</h2>
                         <p class="mb-4">
                           Your Medical Billing Partner is One Message Away
+                        </P>
                           <p>Ready to streamline your revenue cycle, reduce denials, or get a free audit? We're here to help. 
                           Drop us a line — our team responds within 24 hours.</p>
                         </p>
@@ -367,16 +368,25 @@
           </div>
         </main>        
       </div>
-    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/templatemo-scripts.js"></script>
+      <script>
+  const navToggler = document.querySelector('.navbar-toggler');
+  if (navToggler) {
+    navToggler.addEventListener('click', () => {
+      document.getElementById('tmSidebar').classList.toggle('open');
+    });
+  }
+</script>
+
   </body>
 
 </html>
+
 
 
 
