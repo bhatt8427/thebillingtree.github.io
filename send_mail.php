@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "your-email@example.com"; // <-- Replace with your email address
+    $to = "pr@thebilling-tree.com";  
     $name = trim($_POST["contact_name"]);
     $email = trim($_POST["contact_email"]);
     $message = trim($_POST["contact_message"]);
