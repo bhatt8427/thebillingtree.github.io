@@ -69,6 +69,15 @@ img {
     background-attachment: scroll !important;
     background-size: cover;
     background-position: center;
+    filter: brightness(1.1); /* Slightly lighten image */
+  }
+
+  .parallax-window::before {
+    background: none !important; /* Remove dark overlay */
+  }
+
+  .tm-bg-white-transparent {
+    background: rgba(255, 255, 255, 0.95) !important; /* Brighten content */
   }
 }
 
