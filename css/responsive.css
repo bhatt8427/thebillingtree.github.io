@@ -1,0 +1,137 @@
+/* =========================================
+   Responsive Enhancements for The Billing Tree
+   ========================================= */
+
+/* --- General Reset --- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tm-section,
+.tm-section-half,
+.tm-contact-form-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Sidebar Styling for Mobile --- */
+@media (max-width: 991px) {
+  #tmSidebar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    padding-bottom: 10px;
+  }
+
+  /* Hide nav items initially */
+  #tmSidebar .tm-main-nav {
+    display: none;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* When open, show nav links */
+  #tmSidebar.open .tm-main-nav {
+    display: block;
+  }
+
+  #tmSidebar .navbar-toggler {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    border: none;
+    background: none;
+    font-size: 28px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  #tmSidebar ul.tm-social-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  main[role="main"] {
+    margin-left: 0 !important;
+  }
+}
+
+/* --- Parallax Section on Mobile --- */
+@media (max-width: 768px) {
+  .parallax-window {
+    background-attachment: scroll !important;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* --- Gallery Responsiveness --- */
+@media (max-width: 768px) {
+  .tm-gallery {
+    display: block !important;
+  }
+  .tm-gallery-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* --- Contact Form --- */
+@media (max-width: 768px) {
+  .tm-contact-form {
+    padding: 15px;
+  }
+
+  .tm-contact-form .form-control {
+    font-size: 16px;
+  }
+
+  .tm-btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- Typography Scaling --- */
+@media (max-width: 576px) {
+  h1, h2, h3, h4, h5 {
+    font-size: calc(1rem + 1vw);
+  }
+
+  .tm-section-title {
+    text-align: center;
+  }
+
+  .tm-color-gray, .tm-color-primary {
+    text-align: center;
+  }
+
+  .tm-brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- Padding and Spacing --- */
+@media (max-width: 576px) {
+  .tm-section {
+    padding: 30px 15px;
+  }
+  .tm-section-half {
+    padding: 10px 0;
+  }
+}
+
+/* --- Footer --- */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
